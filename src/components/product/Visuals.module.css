@@ -1,0 +1,238 @@
+/* 芯片 */
+.chipStage {
+  position: relative;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  place-items: center;
+}
+
+.chipGlow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(47, 111, 208, 0.55), transparent 65%);
+  filter: blur(22px);
+}
+
+.pins {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+.chipBody {
+  position: relative;
+  display: grid;
+  width: 200px;
+  height: 200px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 26px;
+  background: linear-gradient(145deg, #34373f, #0b0c10 70%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.chipGrid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(circle, #000 25%, transparent 78%);
+  mask-image: radial-gradient(circle, #000 25%, transparent 78%);
+}
+
+.chipCore {
+  position: relative;
+  display: flex;
+  width: 108px;
+  height: 108px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  background: radial-gradient(circle at 30% 20%, #7fb2ff, #1d4ed8 58%, #0a1a44 100%);
+  box-shadow: 0 0 36px rgba(64, 132, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.chipName {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.chipSub {
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  opacity: 0.82;
+}
+
+/* 影像模组 */
+.cameraStage {
+  position: relative;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  place-items: center;
+}
+
+.cameraGlow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190, 170, 150, 0.55), transparent 68%);
+  filter: blur(26px);
+}
+
+.cameraPlate {
+  position: relative;
+  width: 246px;
+  height: 246px;
+  border-radius: 58px;
+  background: linear-gradient(145deg, #f2ece1 0%, #cbc2b3 48%, #9e9689 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 30px 70px rgba(0, 0, 0, 0.24);
+}
+
+.cameraModule {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 148px;
+  height: 148px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 44px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.4), rgba(120, 112, 100, 0.16));
+  box-shadow: inset 0 1px 6px rgba(255, 255, 255, 0.6), 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.lens {
+  position: absolute;
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border: 4px solid #4b4a4c;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #6d7f99, #14171d 58%, #05060a 100%);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12), 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.lensOne {
+  top: 12px;
+  left: 12px;
+}
+
+.lensTwo {
+  top: 12px;
+  left: 82px;
+}
+
+.lensThree {
+  top: 82px;
+  left: 12px;
+}
+
+.lensGlass {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, rgba(120, 175, 255, 0.75), rgba(10, 20, 50, 0.9) 55%, #020308 100%);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.lensGlass::after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 7px;
+  margin: 5px 0 0 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  filter: blur(2px);
+  transform: rotate(-30deg);
+}
+
+.flash {
+  position: absolute;
+  top: 92px;
+  left: 92px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fff8e1, #d8c9a8 70%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.plateLogo {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(60, 56, 50, 0.55);
+}
+
+/* 续航环形 */
+.batteryStage {
+  display: grid;
+  width: 280px;
+  height: 280px;
+  place-items: center;
+}
+
+.ring {
+  display: grid;
+  width: 240px;
+  height: 240px;
+  padding: 14px;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(from -90deg, #30d158 0% 78%, rgba(255, 255, 255, 0.12) 78% 100%);
+  box-shadow: 0 0 60px rgba(48, 209, 88, 0.22);
+}
+
+.ringInner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #0b0b0d;
+  color: #f5f5f7;
+}
+
+.ringNumber {
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.ringLabel {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--color-on-dark-muted);
+}
+
+@media (max-width: 734px) {
+  .chipStage,
+  .pins,
+  .cameraStage {
+    transform: scale(0.82);
+  }
+}

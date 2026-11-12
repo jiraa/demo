@@ -1,0 +1,289 @@
+.root {
+  --wall-from: #4d6ba8;
+  --wall-to: #0a1020;
+  position: relative;
+  flex: none;
+  isolation: isolate;
+}
+
+.root::before {
+  content: '';
+  position: absolute;
+  inset: 12% -22%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(90, 140, 255, 0.26), transparent 66%);
+  filter: blur(42px);
+  z-index: 0;
+}
+
+.hero {
+  width: min(300px, 68vw);
+}
+
+.showcase {
+  width: min(264px, 62vw);
+}
+
+.compact {
+  width: min(190px, 48vw);
+}
+
+.animated {
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 300 / 610;
+  padding: 10px;
+  border-radius: 54px;
+  background: linear-gradient(135deg, #8a8e98 0%, #2a2c32 18%, #555a64 42%, #202227 62%, #7c818c 84%, #33363d 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35), inset 0 0 0 3px rgba(0, 0, 0, 0.32),
+    0 40px 90px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 45px;
+  background: #000;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(110% 65% at 18% 8%, rgba(255, 255, 255, 0.32), transparent 62%),
+    radial-gradient(120% 90% at 82% 100%, rgba(0, 0, 0, 0.7), transparent 62%),
+    linear-gradient(170deg, var(--wall-from) 0%, #1d2036 52%, var(--wall-to) 100%);
+  transition: background 500ms var(--ease-apple);
+}
+
+.wallpaper::after {
+  content: '';
+  position: absolute;
+  right: -18%;
+  bottom: 4%;
+  width: 85%;
+  height: 46%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.18), transparent 64%);
+  filter: blur(12px);
+  transform: rotate(18deg);
+}
+
+.glow {
+  position: absolute;
+  top: 24%;
+  left: -28%;
+  width: 150%;
+  height: 62%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.2), transparent 62%);
+  filter: blur(18px);
+  transform: rotate(-24deg);
+}
+
+.island {
+  position: absolute;
+  z-index: 3;
+  top: 11px;
+  left: 50%;
+  width: 86px;
+  height: 25px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-pill);
+  background: #050507;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.island::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #263e6b, #05070d 70%);
+}
+
+.statusBar {
+  position: absolute;
+  z-index: 4;
+  top: 17px;
+  left: 26px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lockScreen {
+  position: absolute;
+  z-index: 2;
+  top: 17%;
+  right: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
+}
+
+.lockTime {
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.lockDate {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.quickActions {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 32px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 26px;
+}
+
+.quickAction {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.homeBar {
+  position: absolute;
+  z-index: 3;
+  bottom: 9px;
+  left: 50%;
+  width: 36%;
+  height: 5px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.reflection {
+  position: absolute;
+  inset: 0;
+  border-radius: 54px;
+  pointer-events: none;
+  background: linear-gradient(118deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0) 72%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.sideButton {
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #15161a, #8c909a);
+}
+
+.sideButtonTop {
+  top: 18%;
+  left: -2px;
+  height: 7%;
+}
+
+.sideButtonBottom {
+  top: 28%;
+  left: -2px;
+  height: 11%;
+}
+
+.sideButtonRight {
+  top: 26%;
+  right: -2px;
+  height: 14%;
+}
+
+.compact .frame {
+  padding: 7px;
+  border-radius: 38px;
+}
+
+.compact .screen {
+  border-radius: 31px;
+}
+
+.compact .reflection {
+  border-radius: 38px;
+}
+
+.compact .island {
+  top: 8px;
+  width: 58px;
+  height: 17px;
+}
+
+.compact .statusBar {
+  top: 11px;
+  left: 18px;
+  right: 16px;
+  font-size: 9px;
+}
+
+.compact .statusIcons svg {
+  transform: scale(0.72);
+}
+
+.compact .lockTime {
+  font-size: 42px;
+}
+
+.compact .lockDate {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.compact .quickActions {
+  bottom: 22px;
+  padding-inline: 16px;
+}
+
+.compact .quickAction {
+  width: 26px;
+  height: 26px;
+}
+
+.compact .quickAction svg {
+  transform: scale(0.75);
+}

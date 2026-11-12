@@ -1,0 +1,30 @@
+.section {
+  padding-block: var(--section-space);
+  background: #fff;
+}
+
+.headingWrap {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.gridItem {
+  height: 100%;
+}
+
+@media (max-width: 1068px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 734px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

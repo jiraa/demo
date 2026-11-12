@@ -1,0 +1,89 @@
+.section {
+  overflow: hidden;
+  padding-block: var(--section-space);
+}
+
+.light {
+  background: #fff;
+}
+
+.tint {
+  background: var(--color-surface-alt);
+}
+
+.dark {
+  background: #000;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 100px);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.reverse .copy {
+  order: 2;
+}
+
+.reverse .visual {
+  order: 1;
+}
+
+.visual {
+  display: grid;
+  min-height: 340px;
+  place-items: center;
+}
+
+.bullets {
+  display: grid;
+  gap: 12px;
+}
+
+.bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: var(--color-ink-muted);
+}
+
+.bullets svg {
+  flex: none;
+  color: var(--color-accent);
+}
+
+.dark .bullets li {
+  color: var(--color-on-dark-muted);
+}
+
+.dark .bullets svg {
+  color: var(--color-link-dark);
+}
+
+@media (max-width: 833px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .reverse .copy {
+    order: 1;
+  }
+
+  .reverse .visual {
+    order: 2;
+  }
+
+  .visual {
+    min-height: 300px;
+  }
+}

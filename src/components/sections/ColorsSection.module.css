@@ -1,0 +1,29 @@
+.section {
+  overflow: hidden;
+  padding-block: var(--section-space);
+  background: #fff;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
+.glow {
+  position: absolute;
+  width: min(520px, 88vw);
+  height: min(520px, 88vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow), transparent 70%);
+  opacity: 0.34;
+  filter: blur(40px);
+  transition: background 500ms var(--ease-apple);
+  pointer-events: none;
+}
+
+.controls {
+  margin-top: 44px;
+}

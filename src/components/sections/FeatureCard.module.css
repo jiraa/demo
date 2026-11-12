@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px 28px 34px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-alt);
+  transition: transform 320ms var(--ease-apple), box-shadow 320ms var(--ease-apple);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.iconWrap {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 8px;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--card-tint);
+  color: var(--color-ink);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+}

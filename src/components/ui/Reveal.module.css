@@ -1,0 +1,10 @@
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity var(--duration) var(--ease-out), transform var(--duration) var(--ease-out);
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+}

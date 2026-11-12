@@ -1,0 +1,86 @@
+.footer {
+  padding-block: 24px 32px;
+  background: var(--color-surface-alt);
+  color: var(--color-ink-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.note {
+  max-width: 980px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  padding-block: 24px;
+}
+
+.column h3 {
+  margin-bottom: 10px;
+  color: var(--color-ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.column li + li {
+  margin-top: 8px;
+}
+
+.column a:hover,
+.bottomLinks a:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-hairline);
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandMark {
+  color: var(--color-ink);
+}
+
+.bottomLinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bottomLinks li {
+  padding-inline: 10px;
+  border-left: 1px solid var(--color-hairline);
+}
+
+.bottomLinks li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.region {
+  margin-left: auto;
+}
+
+@media (max-width: 734px) {
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .region {
+    margin-left: 0;
+  }
+}
